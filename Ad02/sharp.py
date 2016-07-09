@@ -16,9 +16,9 @@ drawShape(4, 10)
 moveTurtle(60, 30)
 drawShape(3, 20)
 
-# turtle.fillcolor("blue")
-# turtle.begin_fill()
+turtle.fillcolor("blue")	
+turtle.begin_fill()
 
-# turtle.end_fill()
+turtle.end_fill()
 turtle.done()
 time.sleep(2)

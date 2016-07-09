@@ -17,4 +17,10 @@ def colourUpdate():
 	global redDirection
 	global greenDirection
 	global blueDirextion
-	pass
+	
+	redIncrement =redSlider.get()
+	greenIncrement =greenSlider.get()
+	blueIncrement =blueSlider.get()
+
+
+window.mainloop()
