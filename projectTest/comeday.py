@@ -1,7 +1,6 @@
 # encoding:utf-8
 import urllib
 import urllib2
-import cookielib
 import re
 import sys
 
@@ -22,8 +21,7 @@ for page in range(1,8):
         for item in items:
             haveImg = re.search("img", item[2])
             if not haveImg:
-                print>>outputfile,item[0],item[1].replace('<br/>','\n')#item[1]
-
+                print>>outputfile,item[0],":",item[1].replace('<br/>','\n')#item[1]
     except urllib2.URLError, e:
         if hasatter(e, "code"):
             print e.code
