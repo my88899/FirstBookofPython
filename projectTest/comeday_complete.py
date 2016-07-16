@@ -56,7 +56,7 @@ class QSBK:
         haveImg = re.search("img", item[2])
         if not haveImg:
             text=item[1].replace('<br/>','\n')
-            pageStories.append([item[0]strip(),text.stip()])
+            pageStories.append([item[0],text,item[3]])
     return pageStories
 
     # 加载并提取页面的内容，加入到列表中
@@ -84,7 +84,7 @@ class QSBK:
             if input=='Q':
                 self.enable=False
                 return
-            print u"第%d页2\t发布人：%s\t赞：%s\n%s" %(page,story[0],story[3],story[1])
+            print u"第%d页2\t发布人：%s\t赞：%s\n%s" %(page,story[0],story[2],story[1])
 
     # 开始方法
     def start(self):
