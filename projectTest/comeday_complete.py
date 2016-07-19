@@ -57,20 +57,13 @@ class QSBK:
         # 用来存储每页的段子们
         pageStories = []
         # 遍历正则表达式匹配的信息
-<<<<<<< ee83638be37fb969494f1155e9802d09855738cb
-        haveImg = re.search("img", item[2])
-        if not haveImg:
-            text=item[1].replace('<br/>','\n')
-            pageStories.append([item[0],text,item[3]])
-    return pageStories
-=======
         for item in items:
             haveImg = re.search("img", item[2])
             if not haveImg:
                 text = item[1].replace('<br/>', '\n')
                 pageStories.append([item[0].strip(), text.strip(),item[3].strip()])
         return pageStories
->>>>>>> QSBK completed
+
 
     # 加载并提取页面的内容，加入到列表中
     def loadPage(self):
@@ -97,11 +90,7 @@ class QSBK:
             if input == 'Q':
                 self.enable = False
                 return
-<<<<<<< ee83638be37fb969494f1155e9802d09855738cb
-            print u"第%d页2\t发布人：%s\t赞：%s\n%s" %(page,story[0],story[2],story[1])
-=======
             print u"Page:%d\tAuthor:%s\tlike:%s\n%s" % (page, story[0], story[2], story[1])
->>>>>>> QSBK completed
 
     # 开始方法
     def start(self):
